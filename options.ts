@@ -42,6 +42,7 @@ const params = new URLSearchParams(window.location.search);
 const mode = params.get('edom') || '';
 // Set the initial app mode following query params from the URL.
 setAppMode(mode);
+const server = params.get('sv') || undefined;
 
 // Exported as options manager of the current application named as the "opt".
 // It is not a universal utility, because it is opinionated.
@@ -58,4 +59,7 @@ export const opt = {
 	isDevelopmentAllowed: (): boolean => opts.mode <= DevelopmentMode,
 	// DebuggingMode and DevelopmentMode and ExperimentalMode will be true.
 	isExperimentalAllowed: (): boolean => opts.mode <= ExperimentalMode,
+
+	// Get the dynamic address of backend server, used in the development mode.
+	getDynamicBackendServer: (): string | undefined => server,
 };
