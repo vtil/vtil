@@ -16,7 +16,7 @@ import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 // @ts-ignore
-import {Icons} from 'material-table';
+import {Icons, Localization} from 'material-table';
 
 export const LibMaterialTableIcons = {
 	Add: AddBox,
@@ -37,3 +37,22 @@ export const LibMaterialTableIcons = {
 	ThirdStateCheck: Remove,
 	ViewColumn: ViewColumn,
 } as Icons;
+
+export const LibMaterialTableLocalization = {
+	pagination: {
+		labelDisplayedRows: '{from}-{to} of {count}',
+	},
+	toolbar: {
+		nRowsSelected: '选中了 {0} 行',
+		searchPlaceholder: '搜索', searchTooltip: '搜索',
+	},
+	header: {
+		actions: '操作',
+	},
+	body: {
+		emptyDataSourceMessage: '暂无数据',
+		filterRow: {
+			filterTooltip: 'Filter',
+		},
+	},
+} as Localization;
