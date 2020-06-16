@@ -19,7 +19,8 @@ const opts = {
 	// With stability and reliability improved, the available features are less accessible.
 	// @see https://stackoverflow.com/questions/23844667/how-do-i-detect-if-i-am-in-release-or-debug-mode
 	// @see https://developer.android.com/studio/build/build-variants
-	mode: ExperimentalMode,
+	// The default app mode is product-ready, since there is no built option supported.
+	mode: ProductionMode,
 };
 
 const setAppMode = (mode: string) => {
